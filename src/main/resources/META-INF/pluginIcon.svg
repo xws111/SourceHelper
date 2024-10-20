@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 25px;
+        fill: #010458;
+        font-family: "Microsoft YaHei";
+      }
+    </style>
+  </defs>
+  <image id="背景" width="40" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAARUlEQVRYhe3OMQHAMAzAsKz8OWcg3KOHhEDf7u487LycG8ELBCvBSrASrAQrwUqwEqwEK8FKsBKsBCvBSrASrAQrwWRmfj7qBEx6eQpPAAAAAElFTkSuQmCC"/>
+  <text id="SH" class="cls-1" x="3.051" y="29.105">SH</text>
+</svg>

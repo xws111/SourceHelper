@@ -1,0 +1,55 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.xws111.SourceHelper</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>SourceHelper</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="18640173215@163.com" url="https://i.csdn.net/#/user-center/profile?spm=1000.2115.3001.5111">xws111
+    </vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    将 java 源代码文件一键导出为 markdown 格式的笔记, 可以用于博客的发表或个人学习笔记的整理。
+    </br>
+    </br>
+    使用方法：
+    <li>1. 聚焦到你想导出的 java 文件</li>
+    <li>2. 点击菜单栏 Tools -> SourceHelper -> export to markdown </li>
+    <li>3. 去桌面寻找你的 md 笔记吧 </li>
+
+  ]]></description>
+
+    <change-notes>
+        <![CDATA[
+            <h3>v1.0.0</h3>
+            <ul>
+                <li>解析 类 与 接口 功能。
+            </ul>
+        ]]>]>
+    </change-notes>
+    <idea-version since-build="2023.2.6"/>
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends> <!-- Java module dependency -->
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+
+    </extensions>
+    <actions>
+
+        <group id="com.xws111.sourcehelper" text="SourceHelper" description="源码学习的好帮手" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action id="com.xws111.sourcehelper.export" class="com.xws111.SourceHelper" text="Export to Markdown" />
+        </group>
+    </actions>
+</idea-plugin>
