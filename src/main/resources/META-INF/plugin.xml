@@ -15,6 +15,13 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
+    Export Java source code files to markdown format notes with one click, which can be used for blog posting or personal study notes.
+
+    usage:
+    <li>1. Focus on the java file you want to export</li>
+    <li>2. Click the menu bar Tools -> SourceHelper -> export to markdown </li>
+    <li>3. Go to the desktop to find your md note </li>
+
     将 java 源代码文件一键导出为 markdown 格式的笔记, 可以用于博客的发表或个人学习笔记的整理。
     </br>
     </br>
@@ -29,7 +36,7 @@
         <![CDATA[
             <h3>v1.0.0</h3>
             <ul>
-                <li>解析 类 与 接口 功能。
+                <li> resolve class and interface
             </ul>
         ]]>]>
     </change-notes>

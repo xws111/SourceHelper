@@ -1,8 +1,6 @@
 package com.xws111;
 
 
-import java.io.File;
-import java.util.Map;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
