@@ -1,26 +1,26 @@
 package com.xws111;
 
-import com.intellij.CodeStyleBundle;
-import com.intellij.lang.java.JavaLanguage;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.*;
-import com.intellij.psi.codeStyle.CodeStyleManager;
 import com.intellij.psi.javadoc.PsiDocComment;
-import com.intellij.psi.util.PsiTreeUtil;
+import groovy.util.logging.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Objects;
 
 /**
  * @Description: 导出器
  * @date: 2024/10/18 17:34
  * @author: xws111
  **/
+@Slf4j
 public class Exporter {
+    private static final Logger log = LoggerFactory.getLogger(Exporter.class);
     // 项目对象
     private final Project project;
     // 输出路径
@@ -29,7 +29,9 @@ public class Exporter {
     // 默认输出路径为桌面
     public Exporter(Project project) {
         this.project = project;
+        log.info("project:{}", project);
         this.outputDirectory = getDesktopDirectory();
+        log.info("outputDirectory: {}", outputDirectory);
     }
 
     // 传入参数作为输出路径
@@ -115,6 +117,7 @@ public class Exporter {
         // 检查桌面路径是否存在
         File desktopDir = new File(desktopPath);
         if (!desktopDir.exists()) {
+            log.error("path:{} cant found!", desktopPath);
             throw new IllegalStateException("Desktop directory not found.");
         }
 
